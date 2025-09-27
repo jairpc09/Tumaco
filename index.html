@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tumaco - El encanto del Pacífico colombiano</title>
+  <meta name="description" content="Turismo en Tumaco, Nariño: playas, manglares, gastronomía y cultura afrocolombiana." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.card-body .cta {
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+}
+    :root{
+      --azul-oscuro:#3c12a6;       /* color del las letras superiores*/
+      --azul-claro:#260a63;     /* color del minimapa*/
+      --verde-manglar:#18b6ff;  /* color del minimapa*/
+      --dorado:#4978f1;    /* color del botón*/
+      --arena:#94c2c7;      /* color del fondo*/
+      --max-width:1200px;
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--arena),#fff);color:#08303a}
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--azul-claro),var(--verde-manglar));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    nav a{margin:0 8px;color:var(--azul-oscuro);text-decoration:none;font-weight:600}
+    .cta{background:var(--dorado);padding:10px 16px;border-radius:10px;color:#05262a;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{position:relative;border-radius:var(--radius);overflow:hidden;margin:18px 0}
+    .hero .slides{display:flex;transition:transform .6s ease}
+    .slide{min-width:100%;height:420px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:24px;color:white}
+    .hero .overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.05));}
+    .hero .slogan{position:absolute;left:24px;bottom:36px;z-index:2}
+    .slogan h1{margin:0;font-size:28px;letter-spacing:0.4px}
+    .slogan p{margin:6px 0 0;font-size:18px}
+    .carousel-controls{position:absolute;right:24px;bottom:28px;display:flex;gap:8px;z-index:2}
+    .control{background:rgba(255,255,255,.85);border:none;padding:8px 10px;border-radius:8px;cursor:pointer}
+
+    /* Sections */
+    section{background:white;border-radius:12px;padding:20px;margin:18px 0;box-shadow:0 6px 18px rgba(3,48,58,0.05)}
+    h2{color:var(--azul-oscuro);margin-top:0}
+    .grid{display:grid;gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{border-radius:10px;overflow:hidden}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card-body{padding:12px}
+    .card-body {
+    display: flex;
+    flex-direction: column;      /* contenido en columna */
+    justify-content: space-between;
+    height: 5%;                /* todas las cards con misma altura */
+    }
+
+.card-body .cta {
+  align-self: center;          /* botón centrado */
+  margin-top: auto;            /* empuja hacia abajo */
+}
+
+
+    /* Planifica tu viaje */
+    .list{display:flex;flex-direction:column;gap:10px}
+    .list .item{display:flex;gap:12px;align-items:center}
+    .avatar{width:60px;height:60px;border-radius:10px;background:#eee;flex-shrink:0}
+
+    /* Blog */
+    .posts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+
+    /* Contacto */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    form input,form textarea{padding:12px;border-radius:8px;border:1px solid #e6e6e6}
+    form textarea{grid-column:1 / -1;min-height:120px}
+    .socials{display:flex;gap:12px}
+
+    footer{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .posts{grid-template-columns:1fr}
+      .slide{height:320px}
+      form{grid-template-columns:1fr}
+      .hero .slogan h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">Tco</div>
+        <div>
+          <div style="font-weight:800;color:var(--azul-oscuro)">Tumaco-Nariño</div>
+          <div style="font-size:12px;color:var(--azul-oscuro);opacity:.7">La perla del Pacífico</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#hacer">Qué hacer</a>
+        <a href="#lugares">Lugares</a>
+        <a href="#planifica">Planifica tu viaje</a>
+        <a href="#blog">Noticias</a>
+        <a href="https://wa.me/573184722700?text=Hola%20quiero%20más%20información%20sobre%20mi%20aventura%20en%20Tumaco" class="cta" target="_blank">Reservar tu aventura</a>
+      </nav>
+    </header>
+
+    <!-- HERO / CARRUSEL -->
+    <section id="home" class="hero" aria-label="Hero - Tumaco">
+      <div class="slides" id="slides">
+        <div class="slide" style="background-image:url('TumacoLetras3.jpg')">
+          <div class="overlay"></div>
+          <div class="slogan">
+            <h1>Tumaco, La perla del Pacífico.</h1>
+            <p>Playas hermosas, manglares y una cultura que te recibe con música, sabor y pasión.</p>
+            <p style="margin-top:10px"><a href="https://es.wikipedia.org/wiki/Tumaco" target="_blank" class="cta">Descubre más</a></p>
+          </div>
+        </div>
+        
+        <div class="slide" style="background-image:url('TumacoArco.jpg')">
+          <div class="overlay"></div>
+          <div class="slogan"></div>
+          <h1>El arco del morro:
+          <p>La reconocida formación rocosa llamada Arco del Morro en el municipio de Tumaco se derrumbó.</p>
+          <p style="margin-top:10px"><a href="https://www.7maravillas.org/paises/colombia/narino/san-andres-de-tumaco-tumaco/12-arco-del-morro" target="_blank" class="cta">Descubre más</a></p>
+        </div>
+        <div class="slide" style="background-image:url('ChocolateTumaco2.jpg')">
+          <div class="overlay"></div>
+          <div class="slogan"></div>
+          <h1>La mejor calidad en Chocolates, siempre te ofrecemos lo mejor
+          <p style="margin-top:10px"><a href="https://fcp.gov.co/chocolates-tumaco-un-referente-de-resiliencia-y-paz/#:~:text=Chocolates%20Tumaco%20no%20solo%20produce,la%20paz%20desde%20el%20campo." target="_blank" class="cta">Descubre más</a></p>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="control" id="prev">◀</button>
+        <button class="control" id="next">▶</button>
+      </div>
+    </section>
+
+    <!-- Sobre Tumaco -->
+    <section id="sobre">
+      <h2>Sobre Tumaco</h2>
+      <div class="grid grid-2">
+        <div>
+          <p><strong>Breve reseña histórica y cultural:</strong> Tumaco es un puerto del Pacífico colombiano con una profunda tradición afrodescendiente. Su historia combina la pesca artesanal, la música de marimba y festividades comunitarias que conservan raíces ancestrales.</p>
+          <p><strong>Diversidad étnica y gastronomía:</strong> La ciudad se caracteriza por su riqueza cultural: la marimba, los tambores y la danza forman parte de su identidad. Platos emblemáticos como el encocado, la piangua y camarones frescos son indispensables para el visitante.</p>
+        </div>
+        <div>
+          <p><strong>Información geográfica:</strong> Tumaco posee playas de arena, un archipiélago de islas cercanas y extensos manglares que conforman ecosistemas clave para la biodiversidad marina y de aves.</p>
+          <ul>
+            <li>Playas: ideal para surf y descanso.</li>
+            <li>Islas: Bocagrande, Gallo y otras islas cercanas.</li>
+            <li>Manglares: paseos en canoa y avistamiento de fauna.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+   <!-- Qué hacer -->
+<section id="hacer">
+  <h2>Qué hacer</h2>
+  <div class="grid grid-3">
+    
+    <div class="card">
+      <img src="Paddleboard.jpg" alt="Paddleboard en Tumaco">
+      <div class="card-body">
+        <h3>Paddleboard</h3>
+        <p>Es un deporte acuático versátil y accesible, que combina elementos del surf y el kayak, y se puede practicar en diversas aguas como lagos, ríos y el mar.</p>
+        <div class="botones">
+          <a href="https://wa.me/573150677800?text=Hola%20quiero%20reservar%20una%20clase%20de%20paddleboartumaco." 
+             target="_blank" class="cta">Reservar clase</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="PaseoManglares.jpg" alt="Manglares">
+      <div class="card-body">
+        <h3>Paseos por manglares</h3>
+        <p>Rutas en canoa entre manglares para observar aves y aprender de guías locales. En esta ruta del manglar en Tumaco - Nariño, tendrás la oportunidad de extraer pianguas y sembrar tu manglar junto a mujeres emprendedoras.</p>
+        <div class="botones">
+          <a href="https://api.whatsapp.com/send?phone=573144342330&text=Hola%20deseo%20información%20de%20Esariri%20de%20tour%20Conoce%20la%20Ruta%20l%20Manglares%20en%20Tumaco%20-%20Nariño." 
+             class="cta" target="_blank">Reservar un paseo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="EncocadoCangrejo.jpg" alt="Gastronomía">
+      <div class="card-body">
+        <h3>Gastronomía local</h3>
+        <p>Aprende a realizar un delicioso encocado de cangrejo, encocado de concha, encocado de pescado y platos con mariscos frescos en esta hermosa experiencia.</p>
+        <div class="botones">
+          <a href="https://www.instagram.com/escuelatallertumaco_/" class="cta" target="_blank">Clases de cocina</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Lugares destacados -->
+<section id="lugares">
+  <h2>Lugares destacados</h2>
+
+  <div class="grid grid-3">
+    <article class="card">
+      <img src="PlayaMorro.jpg" alt="Playa El Morro">
+      <div class="card-body">
+        <h3>Playa El Morro</h3>
+        <p>Una hermosa playa amplia para disfrutar de sus olas y espacios para descansar. Ideal para atardeceres.</p>
+        <div class="botones">
+          <a href="https://situr.narino.gov.co/atractivos-turisticos/isla-el-morro-y-kioscos" 
+             class="cta cta-lugares" target="_blank">Más Información</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="Bocagrande.jpg" alt="Isla Bocagrande">
+      <div class="card-body">
+        <h3>Isla Bocagrande</h3>
+        <p>Isla cercana con playas reservadas y buena pesca. Excursiones en lancha desde Tumaco.</p>
+        <div class="botones">
+          <a href="http://api.whatsapp.com/send?phone=3186929493&text=Hola%2C%20que%20planes%20tienen%20programados%20para%20estas%20fechas%3F" 
+         style="margin-top:25px" class="cta cta-lugares" target="_blank">Reservar viaje</a>
+        </div> 
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="PlayaBajito.jpg" alt="Playa del Bajito">
+      <div class="card-body">
+        <h3>Playa del Bajito</h3>
+        <p>Una hermosa playa para disfrutar de un hermoso atardecer y su gastronomía.</p>
+        <div class="botones">
+          <a href="https://situr.narino.gov.co/atractivos-turisticos/playa-el-bajito?page=2" 
+            style="margin-top:25px"  class="cta cta-lugares" target="_blank">Más Información</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div style="margin-top:12px" class="grid grid-2">
+    <div class="card">
+      <img src="ManglarLaEnsenada.jpg" alt="Manglares Ensenada">
+      <div class="card-body">
+        <h3>Manglares de Tumaco</h3>
+        <p>Los manglares en Tumaco, ubicados en la costa del Pacífico colombiano, son ecosistemas vitales que albergan una gran riqueza biológica...</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="ParqueColon.jpg" alt="Parque Colón">
+      <div class="card-body">
+        <h3>Parque Colón</h3>
+        <p>El Parque Colón es uno de los espacios más reconocidos en la ciudad, es el parque central de Tumaco y constante punto de encuentro...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Mapas interactivos (iframes) -->
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div id="mapa-el-morro">
+          <h4>Mapa - Playa El Morro</h4>
+          <iframe width="100%" height="240" loading="lazy" style="border:0" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Tumaco,Nari%C3%B1o,Colombia&output=embed"></iframe>
+        </div>
+        <div id="mapa-bocagrande">
+          <h4>Mapa - Islas cercanas</h4>
+          <iframe width="100%" height="240" loading="lazy" style="border:0" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Isla+Bocagrande+Tumaco&output=embed"></iframe>
+        </div>
+      </div>
+
+    </section>
+
+ <!-- Planifica tu viaje -->
+<section id="planifica">
+  <h2>Planifica tu viaje</h2>
+  <div class="grid grid-2">
+
+    <!-- Columna izquierda: Hoteles -->
+    <div>
+      <h3>Hoteles y hospedajes recomendados</h3>
+      <div class="list">
+
+        <div class="item">
+          <div class="avatar">
+            <img src="HotelVillaDelSol.jpg" style="width:70px;height:80px;border-radius:10px;object-fit:cover;">
+          </div>
+          <div>
+            <strong>Hotel Villa del Sol</strong>
+            <div style="font-size:13px">
+              El Hotel Villa del Sol en Tumaco ofrece una experiencia de resort frente al mar en la Isla del Morro...
+            </div>
+            <div class="botones">
+              <a href="https://hotelresortvilladelsoltumaco.com/" class="cta" target="_blank">Contactar Hotel Villa del Sol</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="avatar">
+            <img src="HotelCorales.jpg" style="width:70px;height:80px;border-radius:10px;object-fit:cover;">
+          </div>
+          <div>
+            <strong>Hotel Los Corales</strong>
+            <div style="font-size:13px">
+              El Hotel Los Corales se encuentra en primera línea de playa en las Playas del Morro, ofreciendo habitaciones sencillas, piscina y gastronomía del Pacífico.
+            </div>
+            <div class="botones">
+              <a href="https://www.hotelloscorales.com/el-hotel/sobre-nosotros.html" class="cta" target="_blank">Contactar Hotel Los Corales</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="avatar">
+            <img src="HotelBarranquilla.jpg" style="width:70px;height:80px;border-radius:10px;object-fit:cover;">
+          </div>
+          <div>
+            <strong>Hotel Barranquilla</strong>
+            <div style="font-size:13px">
+              El Hotel Barranquilla en Tumaco ofrece alojamientos frente al mar con aire acondicionado, desayuno típico y paseos por los manglares.
+            </div>
+            <div class="botones">
+              <a href="https://www.instagram.com/hotelbarranquillatumaco/?hl=es-la" class="cta" target="_blank">Contactar Hotel Barranquilla</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Columna derecha: Guías y transporte -->
+    <div>
+      <h3>Guías turísticos y transporte</h3>
+      <p><strong>Guías locales:</strong> Contacta guías certificados para rutas de manglar, pesca y avistamiento de ballenas (temporada alta).</p>
+      <div class="botones">
+        <a href="https://wa.me/573184722700?text=Hola%20quiero%20información%20sobre%20Tumaco" target="_blank" class="cta">Contacta a un guía por WhatsApp</a>
+      </div>
+
+      <p style="margin-top:100px"></p><strong>Transporte:</strong> Tumaco recibe vuelos regionales y acceso por carretera desde Pasto y la costa pacífica. En destino la movilidad es en taxis, lanchas y motos.</p>
+      <div class="botones">
+        <a href="https://www.avianca.com/es/" class="cta" target="_blank">Comprar vuelos</a>
+        <a href="https://www.redbus.co/" class="cta" target="_blank">Comprar pasajes en bus</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!--Noticias -->
+    <section id="blog">
+      <h2>Noticias</h2>
+      <div class="posts">
+        <article class="card">
+          <img src="FestivalCurrulao.jpg" alt="Festival de Marimba">
+          <div class="card-body"><h3>Festival del currulao</h3><p>El Festival Internacional del Currulao se celebra anualmente en San Andrés de Tumaco, Colombia, para conmemorar y fortalecer la cultura afrodescendiente del Pacífico. El festival se lleva a cabo a finales de año, entre noviembre y diciembre, y ofrece a los asistentes música en vivo, danzas tradicionales, y actividades culturales para sumergirse en las tradiciones de la región. .</p></div>
+        </article>
+        <article class="card">
+          <img src="CarnavalDelFuego.jpg" alt="Experiencias de viajeros">
+          <div class="card-body"><h3>Carnaval del fuego</h3><p>El Carnaval del Fuego de Tumaco es una de las festividades más importantes de Colombia y de la región del Pacífico, que conmemora la solidaridad de la comunidad tumaqueña tras un incendio que devastó una estación de bomberos, originando una celebración de cultura afrocolombiana, música, gastronomía, desfiles y un reinado para la recolección de fondos que se ha mantenido hasta hoy.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="grid grid-2">
+        <div>
+          <form action="#" method="post" onsubmit="alert('Mensaje enviado con éxito');return false;">
+            <input type="text" name="nombre" placeholder="Nombre completo" required />
+            <input type="email" name="email" placeholder="Correo electrónico" required />
+            <input type="text" name="asunto" placeholder="Asunto" />
+            <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
+            <button type="submit" class="cta" style="width:fit-content">Enviar mensaje</button>
+          </form>
+        </div>
+        <div>
+        <h4>Redes oficiales</h4>
+        <p>Síguenos para estar al tanto de eventos y promociones:</p>
+        <div class="socials">
+  <!-- Instagram -->
+        <a href="https://www.instagram.com/distritodetumaco/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+  <!-- WhatsApp -->
+        <a href="https://wa.me/573184722700?text=Hola%20quiero%20más%20información" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      
+
+          <h4 style="margin-top:12px">Contacto local</h4>
+          
+<p>
+  Oficina de turismo: — Tel:
+  <a href="https://wa.me/573184722700?text=Hola%20quiero%20información%20sobre%20Turismo%20Tumaco%20-%20Nariño" target="_blank">
+    (+57) 3184722700
+  </a> -
+  <a href="https://wa.me/573156796767?text=Hola%20quiero%20información%20sobre%20Turismo%20Tumaco%20-%20Nariño" target="_blank">
+    (+57) 3156796767
+  </a>
+</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div><p>Ⓣ <strong>Tumaco Turismo</strong> — Promoviendo cultura, biodiversidad y hospitalidad</p></div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Carousel básico
+    (function(){
+      const slides = document.getElementById('slides');
+      const total = slides.children.length;
+      let index = 0;
+      function show(i){
+        slides.style.transform = `translateX(${-i * 100}%)`;
+      }
+      document.getElementById('next').addEventListener('click', ()=>{index=(index+1)%total;show(index)});
+      document.getElementById('prev').addEventListener('click', ()=>{index=(index-1+total)%total;show(index)});
+      // autoplay
+      setInterval(()=>{index=(index+1)%total;show(index)},6000);
+    })();
+  </script>
+  <script>
+  const slides = document.querySelector(".slides");
+  const slide = document.querySelectorAll(".slide");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  let index = 0;
+  const total = slide.length;
+
+  function showSlide(i) {
+    index = (i + total) % total; // para que ciclen
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
+
+  // botones manuales
+  prev.addEventListener("click", () => showSlide(index - 1));
+  next.addEventListener("click", () => showSlide(index + 1));
+
+  // autoplay cada 8 segundos (8000 ms)
+  setInterval(() => {
+    showSlide(index + 1);
+  }, 8000);
+</script>
+
+</body>
+</html>
